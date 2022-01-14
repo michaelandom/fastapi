@@ -1,5 +1,6 @@
 
 from typing import List
+from click import password_option
 from pydantic import BaseModel
 
 class User(BaseModel):
@@ -40,3 +41,6 @@ class showBlog(Blog):
     class Config():
         orm_mode=True
 
+class Login(BaseModel):
+    username:str
+    password:str
